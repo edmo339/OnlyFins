@@ -3,6 +3,16 @@ const Post = require("../models/Post");
 const Comment = require("../models/Comment");
 
 module.exports = {
+
+    getNewPost: (req, res) => {
+        res.render("newpost.ejs");
+      },    
+
+
+
+
+  ///////////////////////////
+
   getProfile: async (req, res) => {
     try {
       const posts = await Post.find({ user: req.user.id });
@@ -81,4 +91,5 @@ module.exports = {
       res.redirect("/profile");
     }
   },
-};
+
+}

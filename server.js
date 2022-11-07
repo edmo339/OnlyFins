@@ -10,6 +10,7 @@ const logger = require("morgan");
 const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
 const postRoutes = require("./routes/posts");
+const newpostRoutes = require("./routes/newposts");
 const commentRoutes = require("./routes/comment");
 
 //Use .env file in config folder
@@ -58,6 +59,7 @@ app.use(flash());
 app.use("/", mainRoutes);
 app.use("/post", postRoutes);
 app.use("/comment", commentRoutes);
+app.use("/newpost", newpostRoutes);
 
 //Server Running
 app.listen(process.env.PORT, () => {
