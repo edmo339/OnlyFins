@@ -1,9 +1,17 @@
 <%- include('partials/header') -%>
 <div class="container">
-  <div class="row justify-content-center mt-5">
-    <div class="col-6">
-      <h2><%= post.title %></h2>
-      <img class="img-fluid" src="<%= post.image%>" />
+  <div class="row justify-content-center mt-0">
+    <div class="row justify-content-center mt-0">
+        <!-- Title   -->
+      <h2 class = "row justify-content-center mt-2 border-2"><%= post.title %></h2>
+      </div>     <!-- Image    -->
+      <img class="w-2/3 p-8 justify-center" src="<%= post.image%>" />
+              <!-- Caption   -->
+      <div class="col-3 mt-1">
+        <p class ="border-2" ><%= post.caption %></p>
+      </div>
+
+        <!--  Like and delete buttons   -->
       <div class="row justify-content-between">
         <form
           class="col-1"
@@ -19,20 +27,19 @@
           method="POST"
           class="col-3"
         >
+        
           <button class="btn btn-primary fa fa-trash" type="submit"></button>
         </form>
         <%}%>
       </div>
     </div>
-    <div class="col-3 mt-5">
-      <p><%= post.caption %></p>
-    </div>
-    
+   
+    <!--  Comments   -->
     <% for(var i=0; i<comments.length; i++) {%>
-      <li class="col-6 justify-content-between mt-5">
-        User <%= comments[i].createdBy%> says <%= comments[i].comment%>   
-        <%if(comments[i].createdBy == user.id)   {%>    
-        //</a>
+      <li class="col-6 justify-content-between mt-3 text-sm border-2">
+        "User" <%= comments[i].createdBy %> says <%= comments[i].comment %>   
+        <%if(comments[i].createdById == user.id)   {%>    
+        
       
       <form
           action="/comment/deleteComment/<%= post.id %>/ <%= comments[i]._id %> ?_method=DELETE"
@@ -43,6 +50,8 @@
         <%}%>
       </li>
     <% } %>
+
+
     <div class="mt-5">
       <h2>Add a Comment</h2>
       <form action="/comment/createComment/<%= post._id %>" method="POST">
@@ -55,12 +64,7 @@
     </form>
   </div>
         
-    </div>
-    <div class="col-6 mt-5">
-      <a class="btn btn-primary" href="/profile">Return to Profile</a>
-      <a class="btn btn-primary" href="/feed">Return to Feed</a>
-    </div>
-  </div>
+    
 </div>
 
 <%- include('partials/footer') -%>

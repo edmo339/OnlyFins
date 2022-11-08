@@ -13,6 +13,7 @@
     "bcrypt": "^5.0.1",
     "cloudinary": "^1.32.0",
     "connect-mongo": "^3.2.0",
+    "daisyui": "^2.38.1",
     "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
@@ -25,7 +26,9 @@
     "multer": "^1.4.5-lts.1",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
-    "tailwindcss": "^3.2.2",
     "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.2.2"
   }
 }
