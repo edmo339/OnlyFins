@@ -1,0 +1,47 @@
+<%- include('partials/header') -%>
+
+<section>
+
+    <div class="hero min-h-screen bg-base-200">
+      <div class="hero-content row justify-content-center">
+        
+        
+        
+        
+        
+        <div>
+          <h1 class="text-5xl font-bold">Update your Profile</h1>
+          <p class="py-4"><div class="mt-5">
+            
+            <form action="/perfil/profilePic" enctype="multipart/form-data" method="POST">
+              
+                <div class="mb-3">
+                    <label for="imgUpload" class="form-label">Profile Pic</label>
+                    <input type="file" class="form-control" id="imageUpload" name="file">
+                  </div>
+
+              <div class="mb-3">
+                <label for="bio" class="form-label">Bio</label>
+                <textarea class="form-control" id="bio" name="bio"></textarea>
+              </div>
+              
+              <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+            </form></p>
+
+            <div>
+                <p>Bio: <%= perfil.bio %></p>
+              </div>
+        
+        </div>
+      </div>
+    </div>
+
+
+      
+      
+      
+  
+
+</section>
+
+<%- include('partials/footer') -%>
