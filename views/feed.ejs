@@ -1,14 +1,22 @@
 <%- include('partials/header') -%>
+
   <section class="container">
     <div class="justify-center">
       <ul class="justify-center p-8">
         <% for(var i=0; i<posts.length; i++) {%>
-          <li class="justify-center mt-2 border-2 ">
-           <a href="http://localhost:2121/feed/<%= posts[i].user%>"> <p class="capitalize hover:uppercase"><%= posts[i].userName%></p></a>
+          <li class="justify-center mt-2 border-2 list-none">
+           <a href="http://localhost:2121/profile/<%= posts[i].user%>"> <p class="capitalize hover:uppercase list-none"><%= posts[i].userName%></p></a>
+           <p class="justify-center list-none"><%= posts[i].title%></p>
             <a href="/post/<%= posts[i]._id%>">
               
               <img class="w-full justify-center md:w-2/3 mt-0" src="<%= posts[i].image%>">
             </a>
+
+            
+              <h5 class="col-3 list-none">Likes: <%= posts[i].likes%></h5>
+              
+            </div>
+          </div>
           </li>
         <% } %>
         </ul>
