@@ -3,12 +3,12 @@
   <div class="row justify-content-center mt-0">
     <div class="row justify-content-center mt-0">
         <!-- Title   -->
-      <h2 class = "row justify-content-center mt-2 border-2"><%= post.title %></h2>
+      <h2 class = "row justify-content-center inset-y-2 border-2"><%= post.title %></h2>
       </div>     <!-- Image    -->
-      <img class="w-2/3 p-8 justify-center" src="<%= post.image%>" />
+      <img class="w-auto max-h-screen p-8 justify-center" src="<%= post.image%>" />
               <!-- Caption   -->
-      <div class="col-3 mt-1">
-        <p class ="border-2" ><%= post.caption %></p>
+      <div class=" mt-1 justify-center">
+        <p class ="border-2 justify-center" ><%= post.caption %></p>
       </div>
 
         <!--  Like and delete buttons   -->

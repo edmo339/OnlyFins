@@ -7,9 +7,10 @@ const { ensureAuth, ensureGuest } = require("../middleware/auth");
 //Post Routes - simplified for now
 
 
-router.post("/profilePic/:id", upload.single("file"), perfilController.profilePic);
+router.post("/profilePic", upload.single("file"), perfilController.profilePic);
 //
 
 router.get("/perfil", ensureAuth, perfilController.getPerfil);
 
 module.exports = router;
+

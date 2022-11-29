@@ -2,17 +2,30 @@
 <div class= "container mt-4">
   
   
-  <div class="avatar">
-    <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-      <img src="<%#= perfil[perfil.length-1].image %>" />
+  <div class="avatar">   
+    <% if ( perfil.length >= 1 ) { %>
+      <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+        <img src="<%= perfil[perfil.length-1].image %>" />
+      </div>
     </div>
-  </div>
-    <h1 class="justify-center font-semibold font-sans ml-4"> <%= user.userName %></h1>
-    <div>
-      <p class="justify-center font-sans ml-4">Bio: <%#= perfil[perfil.length-1].bio %></p>
+      <h1 class="justify-center font-semibold font-sans ml-4"> <%= user.userName %></h1>
+      <div>
+        <p class="justify-center font-sans ml-4">Bio: <%= perfil[perfil.length-1].bio %></p>
+    
+      
+      <% } else{ %>  
+        <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+          <img src="<%# perfil[perfil.length-1].image %>" />
+        </div>
+      </div>
+        <h1 class="justify-center font-semibold font-sans ml-4"> <%= user.userName %></h1>
+        <div>
+          <p class="justify-center font-sans ml-4">Bio: <%# perfil[perfil.length-1].bio %></p>
+      <% } %>
     </div>
   </div>
   
+ 
 </div>
 
 
