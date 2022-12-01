@@ -31,7 +31,36 @@
                       </div>
                       <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
                     </form></p>
-
+                      
+                    <div class="flex-shrink-0 flex border-t border-gray-200 p-4">
+                      <a href="#" class="flex-shrink-0 group block">
+                        <div class="flex items-center">
+                          <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                                <div>
+                                  <button @click="open = !open" class="max-w-xs flex items-center text-sm rounded-full text-white focus:outline-none focus:shadow-solid transition ease-in-out duration-150">
+                                    <img class="inline-block h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
+                          <div class="ml-3">
+                            <p class="text-sm leading-5 font-medium text-gray-700 group-hover:text-gray-900">
+                              John Doe
+                            </p>
+                            <p class="text-xs text-left leading-4 font-medium text-gray-500 group-hover:text-gray-700 transition ease-in-out duration-150">
+                              View profile
+                            </p>
+                          </div>                      
+                                  </button>
+                                </div>
+                                <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="origin-top-right absolute left-0 mt-2 -mr-1 w-48 rounded-md shadow-lg">
+                                  <div class="py-1 rounded-md bg-white shadow-xs relative">
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition ease-in-out duration-150">Your Profile</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition ease-in-out duration-150">Settings</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition ease-in-out duration-150">Sign out</a>
+                                  </div>
+                                </div>
+                              </div>
+              
+                        </div>
+                      </a>
+                    </div>
 
                 
                 </div>
