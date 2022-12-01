@@ -15,6 +15,18 @@ module.exports = {
       console.log(err);
     }
   },
+  getOtherProfile: async (req, res) => {
+    try {
+      const user = await User.findById(req.params.user);
+      const posts = await Post.find({ user: req.params.user });
+      const perfil = await Perfil.find({ user: req.params.user });
+      //res.render(`profile/${req.params.user}`, { posts: posts, user: req.user, perfil: perfil }), console.log(req.params.user.id);
+      res.render("profile.ejs", { posts: posts, user: req.user, perfil: perfil}), console.log(req.params.user);;
+      //(`/profile/${req.params.id}`)
+    } catch (err) {
+      console.log(err);
+    }
+  },
   getFeed: async (req, res) => {
     try {
       const posts = await Post.find().sort({ createdAt: "desc" }).lean();
