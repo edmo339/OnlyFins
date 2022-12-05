@@ -12,5 +12,4 @@ Things to do
 * Add a report post button.
 * Add # to posts and introduce a search feature.
 
-Onlyfins.png
-<p align="left"> <img src="![Alt text](../../../../../../C:/Users/teggy/Documents/Coding%20Projects/OnlyFins-1/Onlyfins.png)" alt="Only Fins" /> </p>
+https://github.com/edmo339/OnlyFins/blob/master/Screenshot.png?raw=true
