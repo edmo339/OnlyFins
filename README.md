@@ -12,4 +12,4 @@ Things to do
 * Add a report post button.
 * Add # to posts and introduce a search feature.
 
-https://github.com/edmo339/OnlyFins/blob/master/Screenshot.png?raw=true
+![image](https://github.com/edmo339/OnlyFins/blob/master/Screenshot.png?raw=true)
